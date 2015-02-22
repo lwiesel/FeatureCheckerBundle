@@ -1,13 +1,13 @@
 <?php
 
-namespace ChessyWeb\FeatureCheckerBundle\Annotations\Driver;
+namespace Lwiesel\FeatureCheckerBundle\Annotations\Driver;
 
 use ChessyWeb\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
 use ChessyWeb\FeatureCheckerBundle\Exception\FeatureNotDefinedException;
 use Doctrine\Common\Annotations\Reader;
 use Doctrine\Common\Util\ClassUtils;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
-use ChessyWeb\FeatureCheckerBundle\Annotations\MustHaveFeature;
+use Lwiesel\FeatureCheckerBundle\Annotations\MustHaveFeature;
 
 class FeatureCheckerDriver
 {

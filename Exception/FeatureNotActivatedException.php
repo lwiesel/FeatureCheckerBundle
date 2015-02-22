@@ -1,6 +1,6 @@
 <?php
 
-namespace ChessyWeb\FeatureCheckerBundle\Exception;
+namespace Lwiesel\FeatureCheckerBundle\Exception;
 
 class FeatureNotActivatedException extends \Exception
 {

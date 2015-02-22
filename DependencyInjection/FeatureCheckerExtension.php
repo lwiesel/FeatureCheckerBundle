@@ -1,6 +1,6 @@
 <?php
 
-namespace ChessyWeb\FeatureCheckerBundle\DependencyInjection;
+namespace Lwiesel\FeatureCheckerBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

@@ -1,6 +1,6 @@
 <?php
 
-namespace ChessyWeb\FeatureCheckerBundle\Twig;
+namespace Lwiesel\FeatureCheckerBundle\Twig;
 
 use Symfony\Component\DependencyInjection\Container;
 

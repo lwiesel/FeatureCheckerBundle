@@ -1,6 +1,6 @@
 <?php
 
-namespace ChessyWeb\FeatureCheckerBundle\Annotations;
+namespace Lwiesel\FeatureCheckerBundle\Annotations;
 
 /**
  * @Annotation

@@ -1,8 +1,8 @@
 <?php
 
-namespace ChessyWeb\FeatureCheckerBundle;
+namespace Lwiesel\FeatureCheckerBundle;
 
-use ChessyWeb\FeatureCheckerBundle\DependencyInjection\FeatureCheckerExtension;
+use Lwiesel\FeatureCheckerBundle\DependencyInjection\FeatureCheckerExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class FeatureCheckerBundle extends Bundle

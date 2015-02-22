@@ -1,8 +1,8 @@
 <?php
 
-namespace ChessyWeb\FeatureCheckerBundle\Controller;
+namespace Lwiesel\FeatureCheckerBundle\Controller;
 
-use ChessyWeb\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
+use Lwiesel\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class ExceptionController extends Controller

@@ -1,8 +1,8 @@
 <?php
 
-namespace ChessyWeb\FeatureCheckerBundle\EventListener;
+namespace Lwiesel\FeatureCheckerBundle\EventListener;
 
-use ChessyWeb\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
+use Lwiesel\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
