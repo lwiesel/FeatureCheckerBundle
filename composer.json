@@ -1,0 +1,16 @@
+{
+    "name": "lwiesel/feature-checker-bundle",
+    "description": "Enable and disable functional features in Symfony2 applications.",
+    "require": {
+        "symfony/symfony": "~2.6",
+        "twig/twig": "~1.18",
+        "doctrine/common": "~2.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Laurent Wiesel",
+            "email": "wiesel.laurent@gmail.com"
+        }
+    ]
+}
