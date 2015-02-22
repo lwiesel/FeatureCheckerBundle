@@ -14,6 +14,7 @@ services:
 
     feature_checker.twig.globals_extension:
         class: Lwiesel\FeatureCheckerBundle\Twig\GlobalsExtension
-        arguments: ['@service_container']
+        arguments:
+            - %feature_checker.features%
         tags:
             - { name: twig.extension }
