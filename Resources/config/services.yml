@@ -1,0 +1,19 @@
+services:
+    feature_checker.driver:
+        class: ChessyWeb\FeatureCheckerBundle\Annotations\Driver\FeatureCheckerDriver
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onFilterController }
+        arguments:
+            - @annotation_reader
+            - %feature_checker.features%
+
+    feature_checker.exception_listener:
+        class: ChessyWeb\FeatureCheckerBundle\EventListener\ExceptionListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+
+    feature_checker.twig.globals_extension:
+        class: ChessyWeb\FeatureCheckerBundle\Twig\GlobalsExtension
+        arguments: ['@service_container']
+        tags:
+            - { name: twig.extension }
