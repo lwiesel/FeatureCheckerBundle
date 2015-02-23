@@ -1,8 +1,8 @@
 <?php
 
-namespace Lwiesel\FeatureCheckerBundle\EventListener;
+namespace LWI\FeatureCheckerBundle\EventListener;
 
-use Lwiesel\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
+use LWI\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 

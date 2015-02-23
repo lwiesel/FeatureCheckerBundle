@@ -1,8 +1,8 @@
 <?php
 
-namespace Lwiesel\FeatureCheckerBundle;
+namespace LWI\FeatureCheckerBundle;
 
-use Lwiesel\FeatureCheckerBundle\DependencyInjection\FeatureCheckerExtension;
+use LWI\FeatureCheckerBundle\DependencyInjection\FeatureCheckerExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class FeatureCheckerBundle extends Bundle

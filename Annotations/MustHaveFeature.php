@@ -1,6 +1,6 @@
 <?php
 
-namespace Lwiesel\FeatureCheckerBundle\Annotations;
+namespace LWI\FeatureCheckerBundle\Annotations;
 
 /**
  * @Annotation

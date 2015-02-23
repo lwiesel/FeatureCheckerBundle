@@ -18,6 +18,6 @@
         "doctrine/common": "~2.4"
     },
     "autoload": {
-        "psr-4": { "Lwiesel\\FeatureCheckerBundle\\": "" }
+        "psr-4": { "LWI\\FeatureCheckerBundle\\": "" }
     }
 }

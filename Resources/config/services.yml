@@ -1,6 +1,6 @@
 services:
     feature_checker.driver:
-        class: Lwiesel\FeatureCheckerBundle\Annotations\Driver\FeatureCheckerDriver
+        class: LWI\FeatureCheckerBundle\Annotations\Driver\FeatureCheckerDriver
         tags:
             - { name: kernel.event_listener, event: kernel.controller, method: onFilterController }
         arguments:
@@ -8,12 +8,12 @@ services:
             - %feature_checker.features%
 
     feature_checker.exception_listener:
-        class: Lwiesel\FeatureCheckerBundle\EventListener\ExceptionListener
+        class: LWI\FeatureCheckerBundle\EventListener\ExceptionListener
         tags:
             - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
 
     feature_checker.twig.globals_extension:
-        class: Lwiesel\FeatureCheckerBundle\Twig\GlobalsExtension
+        class: LWI\FeatureCheckerBundle\Twig\GlobalsExtension
         arguments:
             - %feature_checker.features%
         tags:

@@ -1,8 +1,8 @@
 <?php
 
-namespace Lwiesel\FeatureCheckerBundle\Controller;
+namespace LWI\FeatureCheckerBundle\Controller;
 
-use Lwiesel\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
+use LWI\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class ExceptionController extends Controller

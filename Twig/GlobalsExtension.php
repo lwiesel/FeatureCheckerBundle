@@ -1,6 +1,6 @@
 <?php
 
-namespace Lwiesel\FeatureCheckerBundle\Twig;
+namespace LWI\FeatureCheckerBundle\Twig;
 
 class GlobalsExtension extends \Twig_Extension
 {
