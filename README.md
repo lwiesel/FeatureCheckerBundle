@@ -1,6 +1,6 @@
 # FeatureChecker
 
-[![Packagist](https://img.shields.io/packagist/v/lwiesel/feature-checker.svg)](https://packagist.org/packages/lwiesel/feature-checker-bundle)
+[![Packagist](https://img.shields.io/packagist/v/lwiesel/feature-checker-bundle.svg)](https://packagist.org/packages/lwiesel/feature-checker-bundle)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/lwiesel/FeatureCheckerBundle/master.svg?style=flat-square)](https://travis-ci.org/lwiesel/FeatureCheckerBundle)
 [![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/lwiesel/FeatureCheckerBundle.svg?style=flat-square)](https://scrutinizer-ci.com/g/lwiesel/FeatureCheckerBundle/code-structure)
@@ -55,7 +55,7 @@ class DefaultController extends Controller
     {
         return $this->render('default/index.html.twig');
     }
-    
+
     /**
      * @MustHaveFeature("feature1")
      * @MustHaveFeature("feature3.feature31")
