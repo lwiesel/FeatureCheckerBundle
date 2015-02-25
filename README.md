@@ -8,7 +8,7 @@
 [![HHVM](https://img.shields.io/hhvm/lwiesel/feature-checker-bundle.svg)](http://hhvm.h4cc.de/package/lwiesel/feature-checker-bundle)
 [![Total Downloads](https://img.shields.io/packagist/dt/lwiesel/feature-checker-bundle.svg?style=flat-square)](https://packagist.org/packages/lwiesel/feature-checker-bundle)
 
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/cdfe22bc-1889-43a2-a416-3a06e2f6f2d3/big.png)](https://insight.sensiolabs.com/projects/cdfe22bc-1889-43a2-a416-3a06e2f6f2d3)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/45f2f618-d33b-405f-91f8-0f840a6ccf7d/big.png)](https://insight.sensiolabs.com/projects/45f2f618-d33b-405f-91f8-0f840a6ccf7d)
 
 Define features, and check if they are activated or not in your Symfony2 application.
 
