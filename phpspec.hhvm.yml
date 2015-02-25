@@ -1,0 +1,6 @@
+---
+suites:
+    event_suite:
+        namespace: LWI\FeatureChecker
+        psr4_prefix: LWI\FeatureChecker
+formatter.name: pretty
