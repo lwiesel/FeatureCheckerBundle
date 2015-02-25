@@ -2,34 +2,74 @@
 
 namespace LWI\FeatureCheckerBundle\Annotations\Driver;
 
+use LWI\FeatureChecker\FeatureChecker;
 use LWI\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
-use LWI\FeatureCheckerBundle\Exception\FeatureNotDefinedException;
 use LWI\FeatureCheckerBundle\Annotations\MustHaveFeature;
 use Doctrine\Common\Annotations\Reader;
 use Doctrine\Common\Util\ClassUtils;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
 
+/**
+ * FeatureCheckerDriver
+ *
+ * Handles FeatureChecker annotations
+ */
 class FeatureCheckerDriver
 {
+    /**
+     * @var Reader
+     */
     protected $annotationReader;
-    protected $featuresConfiguration;
 
+    /**
+     * @var FeatureChecker
+     */
+    protected $checker;
+
+    /**
+     * Constructor
+     *
+     * @param Reader $annotationReader
+     * @param $featuresConfiguration
+     */
     public function __construct(Reader $annotationReader, $featuresConfiguration)
     {
         $this->annotationReader = $annotationReader;
-        $this->featuresConfiguration = $featuresConfiguration;
+        $this->checker = new FeatureChecker($featuresConfiguration);
     }
 
     /**
      * This event will fire during any controller call
+     *
+     * @param FilterControllerEvent $event
+     * @return void
+     * @throws FeatureNotActivatedException
      */
     public function onFilterController(FilterControllerEvent $event)
     {
-        $controller = $event->getController();
+        $featureCheckerAnnotations = $this->getFeatureCheckerAnnotations($event);
 
-        list($object, $method) = $controller;
+        foreach ($featureCheckerAnnotations as $featureCheckerAnnotation) {
+            $featureName = $featureCheckerAnnotation->getFeatureName();
 
-        // the controller could be a proxy, e.g. when using the JMSSecuriyExtraBundle or JMSDiExtraBundle
+            if (!$this->checker->isFeatureEnabled($featureName)) {
+                throw new FeatureNotActivatedException($featureName);
+            }
+        }
+    }
+
+    /**
+     * Get action feature checker annotations from event
+     *
+     * @param FilterControllerEvent $event
+     * @return MustHaveFeature[]
+     */
+    protected function getFeatureCheckerAnnotations(FilterControllerEvent $event)
+    {
+        list($object, $method) = $event->getController();
+
+        // the controller could be a proxy,
+        // e.g. when using the JMSSecuriyExtraBundle or JMSDiExtraBundle
         $className = ClassUtils::getClass($object);
 
         $reflectionClass = new \ReflectionClass($className);
@@ -37,18 +77,9 @@ class FeatureCheckerDriver
 
         $allAnnotations = $this->annotationReader->getMethodAnnotations($reflectionMethod);
 
-        $featureCheckerAnnotations = array_filter($allAnnotations, function($annotation) {
+        // Filter FeatureChecker annotation, especially MustHaveFeature
+        return array_filter($allAnnotations, function($annotation) {
             return $annotation instanceof MustHaveFeature;
         });
-
-        foreach ($featureCheckerAnnotations as $featureCheckerAnnotation) {
-            $featureName = $featureCheckerAnnotation->getFeatureName();
-
-            if (!in_array($featureName, array_keys($this->featuresConfiguration))) {
-                throw new FeatureNotDefinedException($featureName);
-            } else if (!$this->featuresConfiguration[$featureName]) {
-                throw new FeatureNotActivatedException($featureName);
-            }
-        }
     }
 }
