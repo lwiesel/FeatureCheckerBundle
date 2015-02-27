@@ -24,8 +24,9 @@ The `featureName` and `message` will still be accessible in the new template.
 
 **Note:**
 
-    This method is more complicated than the one outlined above. Unless  you are planning to override the controllers as well as the templates, it isrecommended
-    that you use the other method.
+    This method is more complicated than the one outlined above.
+    Unless you are planning to override the controllers as well as the
+    templates, it is recommended that you use the other method.
 
 First, create a new bundle and override the `getParent` method in the bundle class.
 

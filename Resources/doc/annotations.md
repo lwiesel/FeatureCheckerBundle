@@ -45,7 +45,6 @@ You can also test whole feature sets. A feature set is considered enabled when a
     {
         return $this->render('default/third.html.twig');
     }
-}
 ```
 
 Next step: [Using service in actions](service.md)
