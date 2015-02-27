@@ -16,7 +16,7 @@ class FeatureCheckerSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->beConstructedWith($this->properFeatures);
+        $this->beConstructedWith(true, $this->properFeatures);
         $this->shouldHaveType('LWI\FeatureCheckerBundle\Service\FeatureChecker');
     }
 }

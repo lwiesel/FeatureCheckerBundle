@@ -21,7 +21,8 @@ class FeatureChecker {
     /**
      * Constructor
      *
-     * @param $featuresConfiguration
+     * @param bool $featuresConfiguration
+     * @param array $featuresConfiguration
      */
     public function __construct($disableUndefined, $featuresConfiguration)
     {
