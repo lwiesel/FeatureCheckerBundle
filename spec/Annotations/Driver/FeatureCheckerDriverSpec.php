@@ -4,7 +4,6 @@ namespace spec\LWI\FeatureCheckerBundle\Annotations\Driver;
 
 use Doctrine\Common\Annotations\Reader;
 use PhpSpec\ObjectBehavior;
-use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
 
 class FeatureCheckerDriverSpec extends ObjectBehavior
 {

@@ -2,19 +2,9 @@
 
 All Notable changes to `FeatureCheckerBundle` will be documented in this file
 
-## NEXT - YYYY-MM-DD
+## v1.1 - 2015-02-27
 
 ### Added
-- Nothing
-
-### Deprecated
-- Nothing
-
-### Fixed
-- Nothing
-
-### Removed
-- Nothing
-
-### Security
-- Nothing
+- Support for feature sets checking
+- FeatureChecker service, for *annotation-less* use
+- Full documentation

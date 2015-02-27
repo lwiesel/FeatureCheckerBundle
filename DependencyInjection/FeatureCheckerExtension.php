@@ -2,6 +2,7 @@
 
 namespace LWI\FeatureCheckerBundle\DependencyInjection;
 
+use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
@@ -10,7 +11,7 @@ use Symfony\Component\Config\FileLocator;
 /**
  * FeatureCheckerExtension
  */
-class FeatureCheckerExtension extends Extension
+class FeatureCheckerExtension extends Extension implements ExtensionInterface
 {
     /**
      * Load bundle configuration
@@ -25,6 +26,8 @@ class FeatureCheckerExtension extends Extension
 
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+
+        $container->setParameter($this->getAlias().'.disable_undefined', $config['disable_undefined']);
 
         // Sets features list in container
         $container->setParameter($this->getAlias().'.features', $config['features']);

@@ -9,6 +9,8 @@ services:
 
     feature_checker.exception_listener:
         class: LWI\FeatureCheckerBundle\EventListener\ExceptionListener
+        arguments:
+            - %feature_checker.disable_undefined%
         tags:
             - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
 
@@ -18,3 +20,9 @@ services:
             - %feature_checker.features%
         tags:
             - { name: twig.extension }
+
+    feature_checker.checker:
+        class: LWI\FeatureCheckerBundle\Service\FeatureChecker
+        arguments:
+            - %feature_checker.disable_undefined%
+            - %feature_checker.features%
