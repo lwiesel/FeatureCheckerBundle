@@ -2,10 +2,8 @@
 
 namespace LWI\FeatureCheckerBundle\Service;
 
-use LWI\FeatureChecker\Exception\FeatureNotDefinedException;
 use LWI\FeatureChecker\FeatureChecker as Checker;
 use LWI\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
-use Symfony\Component\Config\Definition\Exception\Exception;
 
 class FeatureChecker {
     /**
