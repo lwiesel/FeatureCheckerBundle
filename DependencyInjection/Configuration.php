@@ -27,7 +27,7 @@ class Configuration implements ConfigurationInterface
                     ->info('If true, undefined feature will be considered as disabled.')
                 ->end()
                 ->arrayNode('features')
-                    ->prototype('boolean')->end()
+                    ->prototype('variable')->end()
                 ->end()
             ->end()
         ;
