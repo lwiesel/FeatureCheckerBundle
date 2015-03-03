@@ -2,8 +2,8 @@
 
 namespace LWI\FeatureCheckerBundle\Service;
 
-use LWI\FeatureChecker\FeatureChecker as Checker;
 use LWI\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
+use LWI\FeatureChecker\FeatureChecker as Checker;
 
 class FeatureChecker {
     /**

@@ -4,7 +4,6 @@ namespace spec\LWI\FeatureCheckerBundle\Controller;
 
 use LWI\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Component\DependencyInjection\Container;
 

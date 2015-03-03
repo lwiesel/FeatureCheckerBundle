@@ -3,8 +3,6 @@
 namespace spec\LWI\FeatureCheckerBundle\DependencyInjection;
 
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
-use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class FeatureCheckerExtensionSpec extends ObjectBehavior

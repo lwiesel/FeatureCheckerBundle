@@ -2,8 +2,8 @@
 
 namespace spec\LWI\FeatureCheckerBundle\EventListener;
 
-use LWI\FeatureChecker\Exception\FeatureNotDefinedException;
 use LWI\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
+use LWI\FeatureChecker\Exception\FeatureNotDefinedException;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,7 +11,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\HttpKernel\Kernel;
-use Symfony\Component\HttpKernel\Tests\KernelTest;
 
 class ExceptionListenerSpec extends ObjectBehavior
 {

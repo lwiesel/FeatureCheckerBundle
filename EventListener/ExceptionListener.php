@@ -2,8 +2,8 @@
 
 namespace LWI\FeatureCheckerBundle\EventListener;
 
-use LWI\FeatureChecker\Exception\FeatureNotDefinedException;
 use LWI\FeatureCheckerBundle\Exception\FeatureNotActivatedException;
+use LWI\FeatureChecker\Exception\FeatureNotDefinedException;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 

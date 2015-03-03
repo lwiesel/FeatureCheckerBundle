@@ -2,9 +2,7 @@
 
 namespace spec\LWI\FeatureCheckerBundle\Annotations\Driver;
 
-use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\Reader;
-use Doctrine\Common\Util\ClassUtils;
 use LWI\FeatureCheckerBundle\Annotations\MustHaveFeature;
 use LWI\FeatureCheckerBundle\Tests\AppBundle\Controller\TestController;
 use PhpSpec\ObjectBehavior;
