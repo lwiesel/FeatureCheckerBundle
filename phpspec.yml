@@ -5,6 +5,11 @@ extensions:
 code_coverage:
     format: clover
     output: coverage.clover
+    blacklist:
+        - Resources
+        - spec
+        - Tests
+        - vendor
 
 suites:
     event_suite:

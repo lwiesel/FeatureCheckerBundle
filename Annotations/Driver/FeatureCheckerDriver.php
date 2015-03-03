@@ -77,6 +77,8 @@ class FeatureCheckerDriver
 
         $allAnnotations = $this->annotationReader->getMethodAnnotations($reflectionMethod);
 
+        $allAnnotations = is_array($allAnnotations) ? $allAnnotations : array();
+
         // Filter FeatureChecker annotation, especially MustHaveFeature
         return array_filter($allAnnotations, function($annotation) {
             return $annotation instanceof MustHaveFeature;

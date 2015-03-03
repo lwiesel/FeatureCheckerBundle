@@ -1,4 +1,4 @@
-# FeatureChecker
+# FeatureCheckerBundle
 
 [![Packagist](https://img.shields.io/packagist/v/lwiesel/feature-checker-bundle.svg)](https://packagist.org/packages/lwiesel/feature-checker-bundle)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -11,14 +11,6 @@
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/45f2f618-d33b-405f-91f8-0f840a6ccf7d/big.png)](https://insight.sensiolabs.com/projects/45f2f618-d33b-405f-91f8-0f840a6ccf7d)
 
 Define features, and check if they are activated or not in your Symfony2 application.
-
-## Install
-
-Via Composer
-
-``` bash
-$ composer require lwiesel/feature-checker-bundle
-```
 
 ## Usage
 
@@ -33,6 +25,7 @@ feature_checker:
         feature2: false
         feature3:
             feature31: true
+            feature32: true
 ```
 
 Then use the features names in controller annotations. Only the allowed features will execute the action.
@@ -55,68 +48,39 @@ class DefaultController extends Controller
     {
         return $this->render('default/index.html.twig');
     }
+}
+```
 
+Sub-features can be checked with this notation:
+
+``` php
     /**
      * @MustHaveFeature("feature1")
      * @MustHaveFeature("feature3.feature31")
      */
-    public function indexAction()
+    public function secondAction()
     {
-        return $this->render('default/index.html.twig');
+        return $this->render('default/second.html.twig');
+    }
+```
+
+You can also test whole feature sets. A feature set is considered enabled when all sub-features -at any sub-level- is enabled.
+
+``` php
+    /**
+     * @MustHaveFeature("feature3")
+     */
+    public function thirdAction()
+    {
+        return $this->render('default/third.html.twig');
     }
 }
 ```
 
 ## Installation
 
-The installation takes 3 steps:
+Please see [Full documentation](Resources/doc/index.md) for details.
 
-1. Download FeatureCheckerBundle using composer
-2. Enable the bundle
-3. Configure your application's config.yml
-
-### Step1: Download FeatureCheckerBundle using composer
-Add FOSUserBundle by running the command:
-
-``` bash
-$ php composer.phar require lwiesel/feature-checker-bundle "~1.0"
-```
-
-Composer will install the bundle to your project's `vendor/lwiesel` directory.
-
-### Step 2: Enable the bundle
-
-Enable the bundle in the kernel:
-
-``` php
-<?php
-// app/AppKernel.php
-
-public function registerBundles()
-{
-    $bundles = array(
-        // ...
-        new LWI\FeatureCheckerBundle\FeatureCheckerBundle(),
-    );
-}
-```
-
-### Step 3: Configure your application's config.yml
-
-Below is an example of the configuration necessary to use the FeatureCheckerBundle in your application:
-
-``` yaml
-# app/config/config.yml
-
-feature_checker:
-    features:
-        # List here your features
-        feature1: true
-        feature2: false
-        # You can also nest features
-        feature3:
-            feature31: true
-```
 ## Testing
 
 ``` bash

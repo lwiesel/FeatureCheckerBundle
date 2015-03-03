@@ -22,8 +22,12 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
+                ->booleanNode('disable_undefined')
+                    ->defaultFalse()
+                    ->info('If true, undefined feature will be considered as disabled.')
+                ->end()
                 ->arrayNode('features')
-                    ->prototype('boolean')->end()
+                    ->prototype('variable')->end()
                 ->end()
             ->end()
         ;

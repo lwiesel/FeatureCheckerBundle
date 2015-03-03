@@ -21,7 +21,8 @@ class ExceptionController extends Controller
     public function notActivatedAction(FeatureNotActivatedException $exception)
     {
         return $this->render('FeatureCheckerBundle:exception:featureNotActivated.html.twig', array(
-            'featureName' => $exception->getMessage(),
+            'message' => $exception->getMessage(),
+            'featureName' => $exception->getFeatureName(),
         ));
     }
 }
