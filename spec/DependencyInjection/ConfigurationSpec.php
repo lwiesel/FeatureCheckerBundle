@@ -3,7 +3,6 @@
 namespace spec\LWI\FeatureCheckerBundle\DependencyInjection;
 
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class ConfigurationSpec extends ObjectBehavior
 {
