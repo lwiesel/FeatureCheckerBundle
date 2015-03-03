@@ -7,7 +7,7 @@ use LWI\FeatureChecker\FeatureChecker as Checker;
 
 class FeatureChecker {
     /**
-     * @var FeatureChecker
+     * @var Checker
      */
     protected $checker;
 

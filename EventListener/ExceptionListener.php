@@ -20,7 +20,7 @@ class ExceptionListener {
     /**
      *  Constructor
      */
-    function __construct($disableUndefined)
+    public function __construct($disableUndefined)
     {
         $this->disableUndefined = $disableUndefined;
     }
