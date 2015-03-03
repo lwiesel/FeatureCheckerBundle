@@ -46,7 +46,6 @@ class ExceptionListenerSpec extends ObjectBehavior
         FeatureNotActivatedException $exception,
         Kernel $kernel,
         Request $request,
-        Request $subrequest,
         Response $response
     ) {
         $this->beConstructedWith(false);

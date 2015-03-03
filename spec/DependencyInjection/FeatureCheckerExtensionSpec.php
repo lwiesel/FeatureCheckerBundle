@@ -39,11 +39,5 @@ class FeatureCheckerExtensionSpec extends ObjectBehavior
             $this->getWrappedObject()->getAlias().'.disable_undefined',
             $configs[$this->getWrappedObject()->getAlias()]['disable_undefined']
         )->shouldBeCalled();
-
-        // TODO: implement this test
-//        $container->setParameter(
-//            $this->getWrappedObject()->getAlias().'.features',
-//            $configs[$this->getWrappedObject()->getAlias()]['features']
-//        )->shouldBeCalled();
     }
 }
